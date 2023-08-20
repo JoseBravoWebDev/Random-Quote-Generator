@@ -63,7 +63,7 @@ function App() {
   };
 
   const shareOnTumblr = () => {
-    const tumblrUrl = `https://www.tumblr.com/widgets/share/tool?posttype=quote&content=${encodeURIComponent(quote)}&caption=${encodeURIComponent(author)}`;
+    const tumblrUrl = `https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes&caption={author}&content={quote}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`;
     window.open(tumblrUrl, '_blank');
   };
 
@@ -79,7 +79,8 @@ function App() {
                 id="tweet-quote"
                 className="socials__a" 
                 title="Post this quote on Twitter"
-                href="twitter.com/intent/tweet"
+                href="https://twitter.com/intent/tweet"
+                target="_blank"
                 onClick={shareOnTwitter}
                 >
                 <i className="fa-brands fa-twitter"></i>
